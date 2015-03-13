@@ -29,13 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:BenchBuddy-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title ""
-Date "12 mar 2015"
+Date "13 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -65,11 +66,11 @@ U 5500DEDF
 F0 "thermocouple" 50
 F1 "thermocouple.sch" 50
 F2 "TC IN +" I R 9300 2700 60 
-F3 "TC IN  -" I R 9300 2850 60 
-F4 "MOSI" I L 7600 2550 60 
-F5 "MISO" I L 7600 2700 60 
-F6 "SCLK" I L 7600 2850 60 
-F7 "CS_N" I L 7600 3000 60 
+F3 "MOSI" I L 7600 2550 60 
+F4 "SCLK" I L 7600 2850 60 
+F5 "CS_N" I L 7600 3000 60 
+F6 "TC IN-" I R 9300 2850 60 
+F7 "MISO" O L 7600 2700 60 
 $EndSheet
 $Sheet
 S 7650 4950 1650 950 
