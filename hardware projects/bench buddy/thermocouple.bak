@@ -30,14 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:BENCHBUDDEE
-LIBS:BenchBuddy-cache
+LIBS:benchbuddy-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 3 9
 Title ""
-Date "14 mar 2015"
+Date "17 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,9 +45,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8800 1100 2    60   Input ~ 0
+Text HLabel 8900 1100 2    60   Input ~ 0
 TC IN +
-Text HLabel 8800 4050 2    60   Input ~ 0
+Text HLabel 8950 4050 2    60   Input ~ 0
 TC IN-
 Text HLabel 2600 2100 0    60   Input ~ 0
 MOSI
@@ -315,23 +315,9 @@ Wire Wire Line
 Wire Wire Line
 	4900 1200 5100 1200
 Wire Wire Line
-	8400 4050 8850 4050
+	8400 4050 8950 4050
 Wire Wire Line
-	8400 1100 8850 1100
-Wire Wire Line
-	8000 1600 8000 1750
-Wire Wire Line
-	5700 2150 5700 1950
-Wire Wire Line
-	8000 3550 8000 3400
-Wire Wire Line
-	8000 800  8000 650 
-Wire Wire Line
-	8000 4350 8000 4500
-Wire Wire Line
-	5700 2950 5700 3100
-Wire Wire Line
-	4750 3950 5100 3950
+	8400 1100 8900 1100
 $Comp
 L MCP3550-60-E/SN U?
 U 1 1 55022BAE
@@ -351,12 +337,6 @@ Connection ~ 4950 3950
 Wire Wire Line
 	4900 2900 4100 2900
 Connection ~ 4900 2550
-Wire Wire Line
-	3100 2950 2400 2950
-Wire Wire Line
-	3100 3050 2400 3050
-Wire Wire Line
-	3100 3150 2400 3150
 $Comp
 L MCP3550-60-E/SN U?
 U 1 1 55023843
@@ -401,8 +381,6 @@ F 3 "" H 9800 5300 60  0000 C CNN
 	1    9800 5300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9800 5850 9800 5250
 $Comp
 L AGND #PWR?
 U 1 1 550238F8
@@ -414,8 +392,6 @@ F 3 "" H 9800 6550 60  0000 C CNN
 	1    9800 6550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9800 6250 9800 6600
 Wire Wire Line
 	8400 5650 9800 5650
 Connection ~ 9800 5650
@@ -442,4 +418,54 @@ Text Notes 5500 850  0    60   ~ 0
 insturmentation amp\n
 Text Notes 3350 2200 0    60   ~ 0
 16-24 bit adc
+Wire Wire Line
+	5100 3950 4800 3950
+Wire Wire Line
+	5700 2000 5700 2150
+Wire Wire Line
+	5700 2950 5700 3050
+Wire Wire Line
+	8000 3550 8000 3450
+Wire Wire Line
+	8000 4350 8000 4450
+Wire Wire Line
+	9800 5300 9800 5850
+Wire Wire Line
+	9800 6250 9800 6550
+$Comp
+L +12V #PWR?
+U 1 1 55047A07
+P 8000 6250
+F 0 "#PWR?" H 8000 6200 20  0001 C CNN
+F 1 "+12V" H 8000 6350 30  0000 C CNN
+F 2 "" H 8000 6250 60  0000 C CNN
+F 3 "" H 8000 6250 60  0000 C CNN
+	1    8000 6250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8000 6150 8000 6250
+$Comp
+L -12V #PWR?
+U 1 1 55047A41
+P 8000 5150
+F 0 "#PWR?" H 8000 5280 20  0001 C CNN
+F 1 "-12V" H 8000 5250 30  0000 C CNN
+F 2 "" H 8000 5150 60  0000 C CNN
+F 3 "" H 8000 5150 60  0000 C CNN
+	1    8000 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5350 8000 5150
+Wire Wire Line
+	8000 800  8000 700 
+Wire Wire Line
+	8000 1600 8000 1700
+Wire Wire Line
+	2450 2950 3100 2950
+Wire Wire Line
+	2450 3050 3100 3050
+Wire Wire Line
+	2450 3150 3100 3150
 $EndSCHEMATC

@@ -30,14 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:BENCHBUDDEE
-LIBS:BenchBuddy-cache
+LIBS:benchbuddy-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 5 9
 Title ""
-Date "14 mar 2015"
+Date "17 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,16 +45,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 10450 4050 0    60   Output ~ 0
-POWER+
-Text HLabel 10450 4500 0    60   Input ~ 0
-POWER-
-Text HLabel 10300 4950 0    60   Input ~ 0
-TACH
-Text HLabel 1150 5950 0    60   Output ~ 0
-TACH_OUT
-Text HLabel 1050 5450 0    60   Input ~ 0
-FAN_IN
+Text HLabel 10550 4050 2    60   Output ~ 0
+FAN_OUT+
+Text HLabel 10700 4500 2    60   Output ~ 0
+FAN_OUT-
+Text HLabel 10300 4950 2    60   Input ~ 0
+TACH_IN
+Text HLabel 1450 5950 0    60   Output ~ 0
+TACH_MEAS
+Text HLabel 1450 5450 0    60   Input ~ 0
+FAN_EN_N
 $Comp
 L LM324 U?
 U 1 1 55024B94
@@ -80,12 +80,12 @@ $EndComp
 $Comp
 L +12V #PWR?
 U 1 1 55024BDF
-P 7800 2450
-F 0 "#PWR?" H 7800 2400 20  0001 C CNN
-F 1 "+12V" H 7800 2550 30  0000 C CNN
-F 2 "" H 7800 2450 60  0000 C CNN
-F 3 "" H 7800 2450 60  0000 C CNN
-	1    7800 2450
+P 7800 2400
+F 0 "#PWR?" H 7800 2350 20  0001 C CNN
+F 1 "+12V" H 7800 2500 30  0000 C CNN
+F 2 "" H 7800 2400 60  0000 C CNN
+F 3 "" H 7800 2400 60  0000 C CNN
+	1    7800 2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -102,12 +102,12 @@ $EndComp
 $Comp
 L AGND #PWR?
 U 1 1 55024C39
-P 7800 5600
-F 0 "#PWR?" H 7800 5600 40  0001 C CNN
-F 1 "AGND" H 7800 5530 50  0000 C CNN
-F 2 "" H 7800 5600 60  0000 C CNN
-F 3 "" H 7800 5600 60  0000 C CNN
-	1    7800 5600
+P 7800 5650
+F 0 "#PWR?" H 7800 5650 40  0001 C CNN
+F 1 "AGND" H 7800 5580 50  0000 C CNN
+F 2 "" H 7800 5650 60  0000 C CNN
+F 3 "" H 7800 5650 60  0000 C CNN
+	1    7800 5650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -124,12 +124,12 @@ $EndComp
 $Comp
 L -12V #PWR?
 U 1 1 55024CA2
-P 5400 4000
-F 0 "#PWR?" H 5400 4130 20  0001 C CNN
-F 1 "-12V" H 5400 4100 30  0000 C CNN
-F 2 "" H 5400 4000 60  0000 C CNN
-F 3 "" H 5400 4000 60  0000 C CNN
-	1    5400 4000
+P 5400 4050
+F 0 "#PWR?" H 5400 4180 20  0001 C CNN
+F 1 "-12V" H 5400 4150 30  0000 C CNN
+F 2 "" H 5400 4050 60  0000 C CNN
+F 3 "" H 5400 4050 60  0000 C CNN
+	1    5400 4050
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -139,18 +139,20 @@ Wire Wire Line
 Wire Wire Line
 	7800 3550 7800 4050
 Wire Wire Line
-	7800 4050 10450 4050
-Wire Wire Line
 	7800 4500 7800 4650
 Wire Wire Line
-	7800 5150 7800 5650
+	7800 5150 7800 5350
+Wire Wire Line
+	7800 5350 7800 5650
 Wire Wire Line
 	5400 2950 5400 2350
 Connection ~ 7800 4500
 Wire Wire Line
 	5400 3750 5400 4050
 Wire Wire Line
-	4250 3250 5000 3250
+	4250 3250 4650 3250
+Wire Wire Line
+	4650 3250 5000 3250
 $Comp
 L R R?
 U 1 1 55024CF2
@@ -163,7 +165,11 @@ F 3 "~" H 4250 2600 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 2850 4250 3450
+	4250 2850 4250 3250
+Wire Wire Line
+	4250 3250 4250 3400
+Wire Wire Line
+	4250 3400 4250 3450
 $Comp
 L POT RV?
 U 1 1 55024D08
@@ -181,29 +187,29 @@ Wire Wire Line
 $Comp
 L AGND #PWR?
 U 1 1 55024D86
-P 4250 4300
-F 0 "#PWR?" H 4250 4300 40  0001 C CNN
-F 1 "AGND" H 4250 4230 50  0000 C CNN
-F 2 "" H 4250 4300 60  0000 C CNN
-F 3 "" H 4250 4300 60  0000 C CNN
-	1    4250 4300
+P 4250 4350
+F 0 "#PWR?" H 4250 4350 40  0001 C CNN
+F 1 "AGND" H 4250 4280 50  0000 C CNN
+F 2 "" H 4250 4350 60  0000 C CNN
+F 3 "" H 4250 4350 60  0000 C CNN
+	1    4250 4350
 	1    0    0    -1  
 $EndComp
 $Comp
 L +12V #PWR?
 U 1 1 55024DCF
-P 4250 2200
-F 0 "#PWR?" H 4250 2150 20  0001 C CNN
-F 1 "+12V" H 4250 2300 30  0000 C CNN
-F 2 "" H 4250 2200 60  0000 C CNN
-F 3 "" H 4250 2200 60  0000 C CNN
-	1    4250 2200
+P 4250 2150
+F 0 "#PWR?" H 4250 2100 20  0001 C CNN
+F 1 "+12V" H 4250 2250 30  0000 C CNN
+F 2 "" H 4250 2150 60  0000 C CNN
+F 3 "" H 4250 2150 60  0000 C CNN
+	1    4250 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4250 2350 4250 2150
 Wire Wire Line
-	10250 4950 8600 4950
+	8600 4950 10300 4950
 Wire Wire Line
 	8600 4950 8600 6500
 Wire Wire Line
@@ -211,20 +217,22 @@ Wire Wire Line
 Wire Wire Line
 	1500 6500 1500 5950
 Wire Wire Line
-	1500 5950 1100 5950
-Text HLabel 1550 5700 0    60   Output ~ 0
+	1500 5950 1450 5950
+Text HLabel 1450 5700 0    60   Output ~ 0
 CURRENT MEASURE 
 Wire Wire Line
 	7800 5350 6250 5350
 Wire Wire Line
 	6250 5350 6250 5700
 Wire Wire Line
-	6250 5700 1500 5700
+	6250 5700 1450 5700
 Connection ~ 7800 5350
 Wire Wire Line
 	5000 3450 5000 4500
 Wire Wire Line
-	5000 4500 10450 4500
+	5000 4500 7800 4500
+Wire Wire Line
+	7800 4500 10700 4500
 $Comp
 L R R?
 U 1 1 55024EA2
@@ -240,9 +248,11 @@ Wire Wire Line
 	4650 3450 4650 3250
 Connection ~ 4650 3250
 Wire Wire Line
-	4650 3950 4650 5450
+	4650 5450 4650 3950
 Wire Wire Line
-	4650 5450 1000 5450
+	1450 5450 2050 5450
+Wire Wire Line
+	2050 5450 4650 5450
 $Comp
 L MCP4922-E/P U?
 U 1 1 55024EDF
@@ -270,13 +280,13 @@ Wire Wire Line
 Wire Wire Line
 	3950 3400 4250 3400
 Connection ~ 4250 3400
-Text HLabel 1600 3350 0    60   Input ~ 0
+Text HLabel 1550 3350 0    60   Input ~ 0
 MOSI
 Text HLabel 1500 4050 0    60   Output ~ 0
 MISO
-Text HLabel 1600 3550 0    60   Input ~ 0
+Text HLabel 1550 3550 0    60   Input ~ 0
 CS_N
-Text HLabel 1600 3450 0    60   Input ~ 0
+Text HLabel 1550 3450 0    60   Input ~ 0
 SCLK
 Wire Wire Line
 	2050 3350 1550 3350
@@ -300,4 +310,6 @@ Wire Wire Line
 Wire Wire Line
 	2050 4450 2050 5450
 Connection ~ 2050 5450
+Wire Wire Line
+	7800 4050 10550 4050
 $EndSCHEMATC

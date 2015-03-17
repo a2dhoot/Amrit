@@ -30,14 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:BENCHBUDDEE
-LIBS:BenchBuddy-cache
+LIBS:benchbuddy-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 8
+Sheet 8 9
 Title ""
-Date "14 mar 2015"
+Date "17 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -46,13 +46,13 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text HLabel 9150 3600 2    60   BiDi ~ 0
-NC
+RELAY_NC
 Text HLabel 9150 3800 2    60   BiDi ~ 0
-NO
+RELAY_NO
 Text HLabel 3450 4150 0    60   Input ~ 0
-DIN+
+RELAY+
 Text HLabel 3450 4500 0    60   Output ~ 0
-DIN-
+RELAY-
 $Comp
 L PHTRANS U?
 U 1 1 5503C821
@@ -109,15 +109,9 @@ F 3 "~" H 8350 3750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 7450 2550 1    60   BiDi ~ 0
-COM
+RELAY_COM
 Wire Wire Line
 	7450 3700 7950 3700
-Wire Wire Line
-	7450 2500 7450 3700
-Wire Wire Line
-	8750 3600 9200 3600
-Wire Wire Line
-	8750 3800 9200 3800
 Wire Wire Line
 	5300 4550 6000 4550
 Wire Wire Line
@@ -176,11 +170,7 @@ Wire Wire Line
 	5850 4550 5850 5050
 Connection ~ 5850 4550
 Wire Wire Line
-	5850 5450 5850 5700
-Wire Wire Line
 	5850 6200 7350 6200
-Wire Wire Line
-	7350 5550 7350 6550
 Connection ~ 7350 6200
 $Comp
 L GND #PWR?
@@ -201,29 +191,12 @@ Wire Wire Line
 	6000 4350 5300 4350
 Wire Wire Line
 	4100 4500 4200 4500
-Wire Wire Line
-	4200 4150 3400 4150
-Wire Wire Line
-	3600 4500 3400 4500
 Connection ~ 6000 4150
 Wire Wire Line
 	6500 3900 7950 3900
 Wire Wire Line
 	7350 3400 6000 3400
 Connection ~ 6000 3400
-$Comp
-L +12V #PWR?
-U 1 1 5503D360
-P 6000 2500
-F 0 "#PWR?" H 6000 2450 20  0001 C CNN
-F 1 "+12V" H 6000 2600 30  0000 C CNN
-F 2 "" H 6000 2500 60  0000 C CNN
-F 3 "" H 6000 2500 60  0000 C CNN
-	1    6000 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 2800 6000 2450
 Connection ~ 7350 4300
 Wire Wire Line
 	7350 3900 7350 3400
@@ -261,4 +234,31 @@ Wire Wire Line
 	7350 4300 7100 4300
 Wire Wire Line
 	6700 4300 6500 4300
+Wire Wire Line
+	3600 4500 3450 4500
+Wire Wire Line
+	4200 4150 3450 4150
+Wire Wire Line
+	7350 5550 7350 6500
+Wire Wire Line
+	7450 3700 7450 2550
+Wire Wire Line
+	6000 2500 6000 2800
+Wire Wire Line
+	8750 3600 9150 3600
+Wire Wire Line
+	8750 3800 9150 3800
+Wire Wire Line
+	5850 5450 5850 5550
+$Comp
+L +12P #PWR?
+U 1 1 550484FA
+P 6000 2500
+F 0 "#PWR?" H 6000 2470 30  0001 C CNN
+F 1 "+12P" H 6000 2600 30  0000 C CNN
+F 2 "" H 6000 2500 60  0000 C CNN
+F 3 "" H 6000 2500 60  0000 C CNN
+	1    6000 2500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

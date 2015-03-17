@@ -30,14 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:BENCHBUDDEE
-LIBS:BenchBuddy-cache
+LIBS:benchbuddy-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 8
+Sheet 9 9
 Title ""
-Date "14 mar 2015"
+Date "17 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,24 +45,249 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8750 3100 0    60   Output ~ 0
+Text HLabel 8300 2200 2    60   Output ~ 0
 RELAY+
-Text HLabel 8750 3250 0    60   Output ~ 0
+Text HLabel 9150 2300 2    60   Output ~ 0
 RELAY-
-Text HLabel 8600 1900 0    60   Output ~ 0
+Text HLabel 8250 1300 2    60   Output ~ 0
 MOSI
-Text HLabel 8600 2100 0    60   Input ~ 0
+Text HLabel 8250 1200 2    60   Input ~ 0
 MISO
-Text HLabel 8600 2250 0    60   Output ~ 0
+Text HLabel 8250 1100 2    60   Output ~ 0
 SCLK
-Text HLabel 8600 2400 0    60   Output ~ 0
-CS_N
-Text HLabel 8600 1200 0    60   Output ~ 0
-LED_EN
-Text HLabel 8600 1400 0    60   Output ~ 0
-LED_FREQ
-Text HLabel 8700 3650 0    60   Output ~ 0
-FAN_EN
-Text HLabel 8700 3800 0    60   Input ~ 0
+Text HLabel 8250 1400 2    60   Output ~ 0
+DAC_CS_N
+Text HLabel 8300 2300 2    60   Output ~ 0
+FAN_EN_N
+Text HLabel 5300 2150 0    60   Input ~ 0
 TAC_MES
+$Comp
+L ARDUINOPINS ARD?
+U 1 1 5507BF1B
+P 7000 2600
+F 0 "ARD?" H 6700 4300 30  0000 C CNN
+F 1 "ARDUINOPINS" H 6700 4150 30  0000 C CNN
+F 2 "" H 6700 4350 60  0000 C CNN
+F 3 "" H 6700 4350 60  0000 C CNN
+	1    7000 2600
+	1    0    0    -1  
+$EndComp
+Text HLabel 5300 2250 0    60   Input ~ 0
+CURR_MEAS
+$Comp
+L R R?
+U 1 1 5507E89E
+P 7750 1400
+F 0 "R?" V 7650 1400 40  0000 C CNN
+F 1 "R" V 7757 1401 40  0000 C CNN
+F 2 "~" V 7680 1400 30  0000 C CNN
+F 3 "~" H 7750 1400 30  0000 C CNN
+	1    7750 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 55080394
+P 7750 1300
+F 0 "R?" V 7830 1300 40  0000 C CNN
+F 1 "R" V 7757 1301 40  0000 C CNN
+F 2 "~" V 7680 1300 30  0000 C CNN
+F 3 "~" H 7750 1300 30  0000 C CNN
+	1    7750 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 55080646
+P 5900 2250
+F 0 "R?" V 5800 2250 40  0000 C CNN
+F 1 "R" V 5907 2251 40  0000 C CNN
+F 2 "~" V 5830 2250 30  0000 C CNN
+F 3 "~" H 5900 2250 30  0000 C CNN
+	1    5900 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 55080653
+P 5900 2150
+F 0 "R?" V 5800 2150 40  0000 C CNN
+F 1 "R" V 5907 2151 40  0000 C CNN
+F 2 "~" V 5830 2150 30  0000 C CNN
+F 3 "~" H 5900 2150 30  0000 C CNN
+	1    5900 2150
+	0    -1   -1   0   
+$EndComp
+Text HLabel 5300 2050 0    60   Input ~ 0
+V+_ADJ_MON
+Text HLabel 5300 1950 0    60   Input ~ 0
+V-_ADJ_MON
+$Comp
+L R R?
+U 1 1 55081510
+P 7750 1200
+F 0 "R?" V 7830 1200 40  0000 C CNN
+F 1 "R" V 7757 1201 40  0000 C CNN
+F 2 "~" V 7680 1200 30  0000 C CNN
+F 3 "~" H 7750 1200 30  0000 C CNN
+	1    7750 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 55081516
+P 7750 1100
+F 0 "R?" V 7830 1100 40  0000 C CNN
+F 1 "R" V 7757 1101 40  0000 C CNN
+F 2 "~" V 7680 1100 30  0000 C CNN
+F 3 "~" H 7750 1100 30  0000 C CNN
+	1    7750 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5508151C
+P 7850 2300
+F 0 "R?" V 7750 2300 40  0000 C CNN
+F 1 "R" V 7857 2301 40  0000 C CNN
+F 2 "~" V 7780 2300 30  0000 C CNN
+F 3 "~" H 7850 2300 30  0000 C CNN
+	1    7850 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 55081522
+P 7850 2200
+F 0 "R?" V 7750 2200 40  0000 C CNN
+F 1 "R" V 7857 2201 40  0000 C CNN
+F 2 "~" V 7780 2200 30  0000 C CNN
+F 3 "~" H 7850 2200 30  0000 C CNN
+	1    7850 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5508159C
+P 9050 2850
+F 0 "R?" V 8950 2850 40  0000 C CNN
+F 1 "R" V 9057 2851 40  0000 C CNN
+F 2 "~" V 8980 2850 30  0000 C CNN
+F 3 "~" H 9050 2850 30  0000 C CNN
+	1    9050 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 550815A2
+P 9050 3250
+F 0 "#PWR?" H 9050 3250 30  0001 C CNN
+F 1 "GND" H 9050 3180 30  0001 C CNN
+F 2 "" H 9050 3250 60  0000 C CNN
+F 3 "" H 9050 3250 60  0000 C CNN
+	1    9050 3250
+	1    0    0    -1  
+$EndComp
+Text HLabel 8250 1500 2    60   Output ~ 0
+LED_EN_PWN
+$Comp
+L R R?
+U 1 1 550815FC
+P 7750 1500
+F 0 "R?" V 7650 1500 40  0000 C CNN
+F 1 "R" V 7757 1501 40  0000 C CNN
+F 2 "~" V 7680 1500 30  0000 C CNN
+F 3 "~" H 7750 1500 30  0000 C CNN
+	1    7750 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5508162B
+P 5900 1950
+F 0 "R?" V 5800 1950 40  0000 C CNN
+F 1 "R" V 5907 1951 40  0000 C CNN
+F 2 "~" V 5830 1950 30  0000 C CNN
+F 3 "~" H 5900 1950 30  0000 C CNN
+	1    5900 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 55081631
+P 5900 2050
+F 0 "R?" V 5800 2050 40  0000 C CNN
+F 1 "R" V 5907 2051 40  0000 C CNN
+F 2 "~" V 5830 2050 30  0000 C CNN
+F 3 "~" H 5900 2050 30  0000 C CNN
+	1    5900 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5650 2050 5300 2050
+Wire Wire Line
+	5650 1950 5300 1950
+Wire Wire Line
+	8000 1500 8250 1500
+Wire Wire Line
+	7300 1500 7500 1500
+Wire Wire Line
+	9050 3100 9050 3250
+Wire Wire Line
+	8000 1100 8250 1100
+Wire Wire Line
+	7300 1100 7500 1100
+Wire Wire Line
+	8000 1200 8250 1200
+Wire Wire Line
+	7300 1200 7500 1200
+Wire Wire Line
+	8000 1300 8250 1300
+Wire Wire Line
+	7300 1300 7500 1300
+Wire Wire Line
+	8000 1400 8250 1400
+Wire Wire Line
+	7300 1400 7500 1400
+Wire Wire Line
+	5300 2250 5650 2250
+Wire Wire Line
+	5300 2150 5650 2150
+Wire Wire Line
+	9050 2300 9050 2600
+Wire Wire Line
+	9150 2300 9050 2300
+Wire Wire Line
+	8300 2200 8100 2200
+Wire Wire Line
+	8100 2300 8300 2300
+Wire Wire Line
+	7600 2200 7300 2200
+Wire Wire Line
+	7600 2300 7300 2300
+Wire Wire Line
+	6150 1950 6250 1950
+Wire Wire Line
+	6150 2050 6250 2050
+Wire Wire Line
+	6150 2150 6250 2150
+Wire Wire Line
+	6150 2250 6250 2250
+Wire Wire Line
+	7300 1600 7500 1600
+$Comp
+L R R?
+U 1 1 5508F012
+P 7750 1600
+F 0 "R?" V 7650 1600 40  0000 C CNN
+F 1 "R" V 7757 1601 40  0000 C CNN
+F 2 "~" V 7680 1600 30  0000 C CNN
+F 3 "~" H 7750 1600 30  0000 C CNN
+	1    7750 1600
+	0    -1   -1   0   
+$EndComp
+Text HLabel 8250 1600 2    60   Output ~ 0
+ADC_CS_N
+Wire Wire Line
+	8000 1600 8250 1600
 $EndSCHEMATC
